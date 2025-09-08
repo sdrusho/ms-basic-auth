@@ -1,4 +1,4 @@
-package org.basic.micorservice.serivice;
+package org.basic.micorservice.service;
 
 import org.basic.micorservice.model.User;
 import org.basic.micorservice.repository.UserRepository;

@@ -1,4 +1,4 @@
-package org.basic.micorservice.serivice;
+package org.basic.micorservice.service;
 
 import org.basic.micorservice.dtos.LoginUserDto;
 import org.basic.micorservice.dtos.RegisterUserDto;

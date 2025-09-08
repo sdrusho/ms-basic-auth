@@ -1,7 +1,7 @@
 package org.basic.micorservice.controllers;
 
 import org.basic.micorservice.model.User;
-import org.basic.micorservice.serivice.UserService;
+import org.basic.micorservice.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
