@@ -3,6 +3,7 @@ package org.basic.microservice;
 import org.basic.microservice.dtos.LoginUserDto;
 import org.basic.microservice.model.User;
 import org.basic.microservice.response.LoginResponse;
+import org.basic.microservice.service.JwtService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,18 +27,16 @@ public class AuthenticationControllerTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
+    @Autowired
+    private JwtService jwtService;
     @Test
-    void authenticateWithJWT()  {
-
+    void authenticateAndValidateJwtToken()  {
         LoginUserDto dto = new LoginUserDto("rusho","rusho123");
-        HttpHeaders httpHeaders = new HttpHeaders();
-        HttpEntity<User> request = new HttpEntity<User>(httpHeaders);
-
         ResponseEntity<LoginResponse> response = restTemplate.postForEntity("http://localhost:" + port + "/auth/login",dto, LoginResponse.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         String token = response.getBody().getToken();
-        assertThat(token).isNotBlank();
-
+        String userName = jwtService.extractUsername(token);
+        assertThat(userName).isEqualTo("rusho");
     }
 
 

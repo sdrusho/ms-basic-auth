@@ -31,9 +31,6 @@ public class UserControllerTest {
     @Test
     void getCurrentUser()  {
         LoginUserDto dto = new LoginUserDto("rusho","rusho123");
-        HttpHeaders httpHeaders = new HttpHeaders();
-        HttpEntity<User> request = new HttpEntity<User>(httpHeaders);
-
         ResponseEntity<LoginResponse> response = restTemplate.postForEntity("http://localhost:" + port + "/auth/login",dto, LoginResponse.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         String token = response.getBody().getToken();
