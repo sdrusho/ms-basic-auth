@@ -1,5 +1,6 @@
 package org.basic.micorservice.controllers;
 
+import org.basic.micorservice.Exception.CustomException;
 import org.basic.micorservice.model.User;
 import org.basic.micorservice.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class UserController {
     }
 
     @GetMapping("/current")
-    public ResponseEntity<User> authenticatedUser() {
+    public ResponseEntity<User> authenticatedUser() throws CustomException{
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         User currentUser = (User) authentication.getPrincipal();
@@ -30,7 +31,7 @@ public class UserController {
     }
 
     @GetMapping("/list")
-    public ResponseEntity<List<User>> allUsers() {
+    public ResponseEntity<List<User>> allUsers() throws CustomException {
         List <User> users = userService.allUsers();
 
         return ResponseEntity.ok(users);
