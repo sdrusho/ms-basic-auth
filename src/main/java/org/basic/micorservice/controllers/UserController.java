@@ -1,6 +1,6 @@
 package org.basic.micorservice.controllers;
 
-import org.basic.micorservice.Exception.CustomException;
+import org.basic.micorservice.exception.CustomException;
 import org.basic.micorservice.model.User;
 import org.basic.micorservice.service.UserService;
 import org.springframework.http.ResponseEntity;
