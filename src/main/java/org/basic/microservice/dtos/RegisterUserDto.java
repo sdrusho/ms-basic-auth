@@ -1,4 +1,4 @@
-package org.basic.micorservice.dtos;
+package org.basic.microservice.dtos;
 
 public class RegisterUserDto {
     private String email;

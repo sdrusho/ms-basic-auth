@@ -1,9 +1,9 @@
-package org.basic.micorservice.service;
+package org.basic.microservice.service;
 
-import org.basic.micorservice.dtos.LoginUserDto;
-import org.basic.micorservice.dtos.RegisterUserDto;
-import org.basic.micorservice.model.User;
-import org.basic.micorservice.repository.UserRepository;
+import org.basic.microservice.dtos.LoginUserDto;
+import org.basic.microservice.dtos.RegisterUserDto;
+import org.basic.microservice.model.User;
+import org.basic.microservice.repository.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

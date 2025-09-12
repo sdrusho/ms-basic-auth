@@ -1,12 +1,12 @@
-package org.basic.micorservice.controllers;
+package org.basic.microservice.controllers;
 
 
-import org.basic.micorservice.dtos.LoginUserDto;
-import org.basic.micorservice.dtos.RegisterUserDto;
-import org.basic.micorservice.model.User;
-import org.basic.micorservice.response.LoginResponse;
-import org.basic.micorservice.service.AuthenticationService;
-import org.basic.micorservice.service.JwtService;
+import org.basic.microservice.dtos.LoginUserDto;
+import org.basic.microservice.dtos.RegisterUserDto;
+import org.basic.microservice.model.User;
+import org.basic.microservice.response.LoginResponse;
+import org.basic.microservice.service.AuthenticationService;
+import org.basic.microservice.service.JwtService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

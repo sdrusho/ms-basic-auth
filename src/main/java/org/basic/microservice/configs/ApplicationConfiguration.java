@@ -1,7 +1,7 @@
-package org.basic.micorservice.configs;
+package org.basic.microservice.configs;
 
 
-import org.basic.micorservice.repository.UserRepository;
+import org.basic.microservice.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

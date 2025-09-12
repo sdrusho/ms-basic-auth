@@ -1,10 +1,10 @@
-package org.basic.micorservice.configs;
+package org.basic.microservice.configs;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.basic.micorservice.service.JwtService;
+import org.basic.microservice.service.JwtService;
 import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

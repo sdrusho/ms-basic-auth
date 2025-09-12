@@ -1,8 +1,8 @@
-package org.basic.micorservice.controllers;
+package org.basic.microservice.controllers;
 
-import org.basic.micorservice.exception.CustomException;
-import org.basic.micorservice.model.User;
-import org.basic.micorservice.service.UserService;
+import org.basic.microservice.exception.CustomException;
+import org.basic.microservice.model.User;
+import org.basic.microservice.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

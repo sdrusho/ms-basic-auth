@@ -1,4 +1,4 @@
-package org.basic.micorservice.exception;
+package org.basic.microservice.exception;
 
 public class ErrorResponse {
 

@@ -1,6 +1,6 @@
-package org.basic.micorservice.repository;
+package org.basic.microservice.repository;
 
-import org.basic.micorservice.model.User;
+import org.basic.microservice.model.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

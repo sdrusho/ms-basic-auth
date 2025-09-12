@@ -1,7 +1,7 @@
-package org.basic.micorservice.service;
+package org.basic.microservice.service;
 
-import org.basic.micorservice.model.User;
-import org.basic.micorservice.repository.UserRepository;
+import org.basic.microservice.model.User;
+import org.basic.microservice.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

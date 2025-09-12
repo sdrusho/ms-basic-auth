@@ -1,4 +1,4 @@
-package org.basic.micorservice.model;
+package org.basic.microservice.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;

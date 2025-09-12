@@ -1,4 +1,4 @@
-package org.basic.micorservice.response;
+package org.basic.microservice.response;
 
 public class LoginResponse {
     private String token;

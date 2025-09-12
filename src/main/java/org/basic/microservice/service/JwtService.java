@@ -1,4 +1,4 @@
-package org.basic.micorservice.service;
+package org.basic.microservice.service;
 
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
