@@ -1,6 +1,7 @@
 package org.basic.microservice.controllers;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.basic.microservice.dtos.LoginUserDto;
 import org.basic.microservice.dtos.RegisterUserDto;
 import org.basic.microservice.model.User;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping("/auth")
 @RestController
+@Slf4j
 public class AuthenticationController {
     private final JwtService jwtService;
 
@@ -28,12 +30,13 @@ public class AuthenticationController {
     @PostMapping("/signup")
     public ResponseEntity<User> register(@RequestBody RegisterUserDto registerUserDto) {
         User registeredUser = authenticationService.signup(registerUserDto);
-
+        log.info("Received request to signup user");
         return ResponseEntity.ok(registeredUser);
     }
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginUserDto loginUserDto) {
+        log.info("Received request to login");
         User authenticatedUser = authenticationService.authenticate(loginUserDto);
 
         String jwtToken = jwtService.generateToken(authenticatedUser);

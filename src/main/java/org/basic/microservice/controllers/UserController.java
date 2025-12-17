@@ -9,11 +9,13 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
 @RequestMapping("/users")
 @RestController
+@Slf4j
 public class UserController {
     private final UserService userService;
 
@@ -32,6 +34,7 @@ public class UserController {
 
     @GetMapping("/list")
     public ResponseEntity<List<User>> allUsers() throws CustomException {
+        log.info("Received request to list users");
         List <User> users = userService.allUsers();
 
         return ResponseEntity.ok(users);
