@@ -34,6 +34,7 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/public/**").permitAll() // Allow public access to /public/**
                         .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/stream-sse").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN") // Only ADMIN role can access /admin/**
                         .anyRequest().authenticated() // All other requests require authentication
                 )
